@@ -1,0 +1,312 @@
+/****** LA ROTATION DES picture ******/
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .devant_1, .derriere_1,.devant_2, .derriere_2,.devant_3, .derriere_3,.devant_4, .derriere_4,.devant_5, .derriere_5,.devant_6, .derriere_6 {
+	width: 550px;
+	height: 350px;
+	position: relative;
+    padding-right: 15px;
+    padding-left: 15px;
+    
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.devant_1, .derriere_1, .devant_2, .derriere_2,.devant_3, .derriere_3,.devant_4, .derriere_4,.devant_5, .derriere_5,.devant_6, .derriere_6{
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* Image 1 */
+.devant_1 {
+	background-image: url("../picture/resto.jpg");
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+.derriere_1 {
+	background-image: url("../picture/resto2.jpg");
+	transform: rotateY(180deg);
+}
+
+/* Image 2 */
+
+.devant_2 {
+	background-image: url("../picture/resto3.jpg");
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+.derriere_2 {
+	background-image: url("../picture/resto4.jpg");
+	transform: rotateY(180deg);
+}
+
+/* Image 3 */
+
+.devant_3 {
+	background-image: url("../picture/resto5.jpg");
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+.derriere_3 {
+	background-image: url("../picture/resto6.jpg");
+	transform: rotateY(180deg);
+}
+
+/* Image 4 */
+
+.devant_4 {
+	background-image: url("../picture/resto7.jpg");
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+.derriere_4 {
+	background-image: url("../picture/resto8.jpg");
+	transform: rotateY(180deg);
+}
+
+/* Image 5 */
+
+.devant_5 {
+	background-image: url("../picture/resto9.jpg");
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+.derriere_5 {
+	background-image: url("../picture/resto10.jpg");
+	transform: rotateY(180deg);
+}
+
+/* Image 6 */
+
+.devant_6 {
+	background-image: url("../picture/resto11.jpg");
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+.derriere_6 {
+	background-image: url("../picture/resto12.jpg");
+	transform: rotateY(180deg);
+}
+
+
+/*
+Astuce :
+Lorsqu'on survole le bloc devant, on applique une rotation au bloc derriere
+*/
+
+#devant_1:hover + #derriere_1,#devant_2:hover + #derriere_2,#devant_3:hover + #derriere_3,#devant_4:hover + #derriere_4,#devant_5:hover + #derriere_5,#devant_6:hover + #derriere_6
+{
+    transform: rotateY(180deg);  /* On passe de -180° à 180° : tour complet */
+}	
+
+li{
+	font-size: 20px;
+}
+
+#vert{
+color: green;
+}
+
+#jaune{
+color : yellow;
+}
+
+body#Menu{
+    background: linear-gradient(gray, white);
+
+    /* Obligatoire si on veut "voir" le dégradé */
+    width: 1400px;
+    height: 2500px;
+    /*opacity: 0.9; */
+   
+
+}
+
+body#Connexion{
+	 background: linear-gradient(black, white);
+
+    /* Obligatoire si on veut "voir" le dégradé */
+    width: 1400px;
+    height: 250px;
+    /*opacity: 0.9; */
+
+}
+
+
+@font-face {
+    font-family: 'MaPolice';
+    src: url('../fonts/Police.ttf');
+      
+}
+
+
+p{
+
+font-family: 'MaPolice';
+font-size: 45px;
+
+}
+
+
+.dessous
+{
+    clear: both;
+}
+
+.centrer{
+	text-align: center;
+}
+
+#panier{
+	float :right;
+	width: 45%;
+	padding: 2%;
+	text-align: center;
+
+}
+
+/* les cadres */
+#frame1{
+
+    border: 3px black dashed;
+    width: 40%;
+    padding: 2%;
+    margin-left:35%;
+    margin-top: 10%;
+    text-align: center;
+
+}
+
+#frame2{
+
+    border: 10px blue groove;
+    width: 40%;
+    padding: 2%;
+    margin-left:35%;
+    margin-top: 10%;
+    text-align: center;
+
+}
+
+
+#frame3{
+
+    border: 8px green inset;
+    width: 40%;
+    padding: 2%;
+    margin-left:35%;
+    margin-top: 10%;
+    text-align: center;
+
+}
+
+
+#frame4{
+
+    border: 8px pink double;
+    width: 40%;
+    padding: 2%;
+    margin-left:35%;
+    margin-top: 10%;
+    text-align: center;
+
+}
+
+
+#frame5{
+
+    border: 10px gray groove;
+    width: 40%;
+    padding: 2%;
+    margin-left:25%;
+    margin-top: 5%;
+    text-align: center;
+
+}
+
+#frame6{
+
+    border: 10px green groove;
+    width: 70%;
+    padding: 2%;
+    margin-top: 1%;
+    text-align: center;
+
+}
+
+
+
+#frame7{
+
+    border: 10px black groove;
+    width: 30%;
+    padding: 2%;
+    margin-top: 15%;
+    margin-left: 52%;
+    text-align: center;
+
+}
+
+
+#frame8{
+
+    border: 10px blue dashed;
+    width: 30%;
+    padding: 2%;
+    margin-top: 15%;
+    margin-left: 32%;
+    text-align: center;
+
+}
+
+
+#frame9{
+
+    border: 5px green dashed;
+    width: 25%;
+    padding: 2%;
+    margin-top: 5%;
+    margin-left: 15%;
+    text-align: center;
+
+}
+
+/*.sans{
+	color :red;
+}*/
+
+
+
+
+
+
+
